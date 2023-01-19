@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-import Shell from "home/Shell";
+import Search from "./Search";
 
 import "./index.scss";
 import "antd/dist/antd.css";
 
-ReactDOM.render(<Shell />, document.getElementById("app"));
+const container = document.getElementById("app");
+const root = createRoot(container);
+root.render(<Search />);

@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3004/",
   },
 
   resolve: {
@@ -12,14 +12,14 @@ module.exports = {
   },
 
   devServer: {
-    port: 3002,
+    port: 3004,
     historyApiFallback: true,
   },
 
   module: {
     rules: [
       {
-        test: /\.m?js/,
+        test: /\.m?js$/,
         type: "javascript/auto",
         resolve: {
           fullySpecified: false,
@@ -43,11 +43,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "search",
       filename: "remoteEntry.js",
-      remotes: {
-        home: "home@http://localhost:3000/remoteEntry.js",
-        profile: "profile@http://localhost:3001/remoteEntry.js",
-        search: "search@http://localhost:3002/remoteEntry.js",
-      },
+      // remotes: {
+      //   home: "home@http://localhost:3000/remoteEntry.js",
+      //   profile: "profile@http://localhost:3001/remoteEntry.js",
+      //   search: "search@http://localhost:3002/remoteEntry.js",
+      // },
       exposes: {
         "./Search": "./src/Search",
       },

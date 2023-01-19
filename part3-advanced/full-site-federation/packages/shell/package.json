@@ -1,10 +1,10 @@
 {
-  "name": "search",
+  "name": "shell",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "build:start": "cd dist && PORT=3002 npx serve",
+    "build:start": "cd dist && PORT=3000 npx serve",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
-    "prop-types": "^15.8.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-to-webcomponent": "^1.7.2"
+    "antd": "^4.17.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-router-dom": "^6.2.1"
   }
 }

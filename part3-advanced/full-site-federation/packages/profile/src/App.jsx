@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Shell from "home/Shell";
+import Profile from "./Profile";
 
 import "./index.scss";
 import "antd/dist/antd.css";
 
-ReactDOM.render(<Shell />, document.getElementById("app"));
+ReactDOM.render(<Profile />, document.getElementById("app"));
